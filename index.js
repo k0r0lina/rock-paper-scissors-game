@@ -9,30 +9,38 @@ function clearMessages() {
   document.getElementById("messages").innerHTML = "";
 }
 
-// Computer's Move
-let computerMove = "";
-let randomNumber = Math.floor(Math.random() * 3 + 1);
-console.log("Computer's number: " + randomNumber);
-if (randomNumber == "1") {
-  computerMove = "rock";
-} else if (randomNumber == "2") {
-  computerMove = "paper";
-} else if (randomNumber == "3") {
-  computerMove = "scissors";
-}
-printMessage("My move: " + computerMove);
+let moveId, playerMove, computerMove, randomNumber, playerInput;
 
-// Player's Move
-let playerMove = "";
-let playerInput = prompt("Choose your move! 1: rock, 2: paper, 3: scissors.");
-console.log("Player's move: " + playerInput);
-if (playerInput == "1") {
-  playerMove = "rock";
-} else if (playerInput == "2") {
-  playerMove = "paper";
-} else if (playerInput == "3") {
-  playerMove = "scissors";
-} else {
-  alert("Please choose number between 1 and 3.");
+// Move function
+function getMoveName(moveId) {
+  if (moveId == 1) {
+    return "rock";
+  } else if (moveId == 2) {
+    return "paper";
+  } else if (moveId == 3) {
+    return "scissors";
+  } else {
+    return "Please insert number between 1 - 3.";
+  }
 }
-printMessage("Your move: " + playerMove);
+playerInput = prompt("Choose your move! Pick a number between 1 - 3.");
+playerMove = getMoveName(playerInput);
+randomNumber = Math.floor(Math.random() * 3 + 1);
+computerMove = getMoveName(randomNumber);
+
+// Display results
+function displayResults(playerMove, computerMove) {
+  if (playerMove == "rock" && computerMove == "scissors") {
+    printMessage("You win!");
+  } else if (playerMove == "paper" && computerMove == "rock") {
+    printMessage("You win!");
+  } else if (playerMove == "scissors" && computerMove == "paper") {
+    printMessage("You win!");
+  } else if (playerMove === computerMove) {
+    printMessage("Draw!");
+  } else {
+    printMessage("You lose!");
+  }
+}
+console.log(playerMove + " - " + computerMove);
+displayResults(playerMove, computerMove);
