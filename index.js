@@ -41,7 +41,7 @@ function buttonClicked(buttonName) {
       printMessage("You lose!");
     }
   }
-  console.log(playerMove + " - " + computerMove);
+  printMessage(playerMove + " - " + computerMove);
   displayResults(playerMove, computerMove);
 }
 
