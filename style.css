@@ -9,6 +9,7 @@ body {
   background-color: #f5eded;
   color: #6482ad;
   text-align: center;
+  font-size: 25px;
   max-width: 700px;
   margin: 0 auto;
   padding: 0 20px;
@@ -43,8 +44,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
   color: #6482ad;
+  font-size: 25px;
   padding: 15px 25px;
   border: 5px solid #6482ad;
   border-radius: 10px;
@@ -64,16 +65,36 @@ span {
   transform: rotate(-45deg);
 }
 
-#player-name {
+#tag-names {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  font-size: 20px;
-  text-decoration: underline;
   text-transform: uppercase;
 }
 
+#tag-names > div {
+  flex: 1;
+}
+
+#player-name {
+  text-decoration: underline;
+  margin: 15px 0;
+}
+
+#player-move,
+#computer-move {
+  margin-top: 10px;
+  font-size: 25px;
+  text-decoration: none;
+}
+
 #messages {
-  font-size: 20px;
-  line-height: 40px;
+  line-height: 50px;
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+
+#result {
+  margin-top: 50px;
+  font-size: 40px;
 }

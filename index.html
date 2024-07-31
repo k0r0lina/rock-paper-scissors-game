@@ -4,28 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock-Paper-Scissors</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1 id="title">Rock-Paper-Scissors</h1>
-        <h2 id="subtitle">Choose your move!</h2>
-      </header>
-
-      <div id="buttons">
-        <button id="button-rock"><span>✊</span>rock</button>
-        <button id="button-paper"><span>🤚</span>paper</button>
-        <button id="button-scissors"><span>✌️</span>scissors</button>
-      </div>
-
-      <div id="player-name">
-        <p>Player</p>
-        <p>Computer</p>
-      </div>
-
-      <div id="messages"></div>
+    <header>
+      <h1 id="title">Rock-Paper-Scissors</h1>
+      <h2 id="subtitle">Choose your move!</h2>
+    </header>
+    <div id="buttons">
+      <button id="button-rock"><span>✊</span>rock</button>
+      <button id="button-paper"><span>✋</span>paper</button>
+      <button id="button-scissors"><span>✌</span>scissors</button>
     </div>
-    <script src="index.js" charset="UTF-8"></script>
+    <div id="tag-names">
+      <div>
+        <div id="player-name">PLAYER</div>
+        <div id="player-move"></div>
+      </div>
+      <div>
+        <div id="player-name">COMPUTER</div>
+        <div id="computer-move"></div>
+      </div>
+    </div>
+    <div id="messages"></div>
+    <div id="result">0 - 0</div>
+    <script src="script.js"></script>
   </body>
 </html>
